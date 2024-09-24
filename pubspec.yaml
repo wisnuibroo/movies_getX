@@ -69,6 +69,11 @@ flutter:
   - assets/one piece poster.jpg
   - assets/toy story poster.jpg
   - assets/doraemon poster.jpg
+  - assets/baby boss poster.jpg
+  - assets/kungfu panda poster.jpg
+  - assets/lego poster.jpg
+  - assets/joker poster.jpg
+  - assets/captain amerika poster.jpg
   
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

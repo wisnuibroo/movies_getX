@@ -7,7 +7,6 @@ class MyText extends StatelessWidget {
   final EdgeInsetsGeometry? padding;
   final Color colors;
 
-
   const MyText({
     super.key,
     required this.hintText,
@@ -15,7 +14,6 @@ class MyText extends StatelessWidget {
     required this.fontWeight,
     this.padding,
     required this.colors,
-
   });
 
   @override

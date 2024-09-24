@@ -33,7 +33,7 @@ class _MyTextFieldState extends State<MyTextField> {
             fillColor: const Color(0xFFE4E5E9),
             filled: true,
             border:
-                const OutlineInputBorder(), // Menggunakan border default (kotak)
+                const OutlineInputBorder(), 
             suffixIcon: widget.isObscure
                 ? IconButton(
                     icon: Icon(

@@ -9,7 +9,8 @@ class MyMovies extends StatelessWidget {
     super.key,
     required this.imagePaths,
     this.posterHeight = 150,
-    this.posterWidth = 100,
+    this.posterWidth = 100, 
+    required String imagePath,
   });
 
   @override
