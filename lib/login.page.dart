@@ -14,6 +14,36 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController usernameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
+  final String validUsername = "wisnu";
+  final String validPassword = "wisnu";
+
+  void _validateLogin() {
+    String username = usernameController.text;
+    String password = passwordController.text;
+
+    if (username == validUsername && password == validPassword) {
+      Get.snackbar(
+        "Login Berhasil",
+        "Selamat datang $username!",
+        backgroundColor: Colors.green,
+        colorText: Colors.white,
+        snackPosition: SnackPosition.TOP,
+      );
+
+      Future.delayed(Duration(seconds: 1), () {
+        Get.toNamed('/dashboard');
+      });
+    } else {
+      Get.snackbar(
+        "Login Gagal",
+        "Username atau password salah",
+        backgroundColor: Colors.redAccent,
+        colorText: Colors.white,
+        snackPosition: SnackPosition.TOP,
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +53,7 @@ class _LoginPageState extends State<LoginPage> {
             decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage("assets/bglogin.png"),
-                fit: BoxFit.cover, //agar aset bg fullscreen
+                fit: BoxFit.cover,
               ),
             ),
           ),
@@ -66,9 +96,7 @@ class _LoginPageState extends State<LoginPage> {
                     backgroundColor: Colors.green,
                     textColor: Colors.white,
                     radius: 0,
-                    onPressed: () {
-                      Get.toNamed('/dashboard');
-                    },
+                    onPressed: _validateLogin,
                   ),
                 ],
               ),
