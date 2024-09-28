@@ -67,6 +67,7 @@ flutter:
   - assets/jurassic park poster.jpg
   - assets/marvel poster.jpg
   - assets/superman poster.jpg
+  - assets/joker poster.jpg
   - assets/demon slayer poster.jpg
   - assets/naruto poster.jpg
   - assets/one piece poster.jpg
@@ -89,6 +90,15 @@ flutter:
   - assets/captain amerika poster.jpg
   - assets/kucing.png
   - assets/backgrond profile.png
+  - assets/amelia poster.jpg
+  - assets/consumed poster.jpg
+  - assets/mouse trap poster.jpg
+  - assets/tarot poster.jpg
+  - assets/the hand poster.jpg
+  - assets/the y poster.jpg
+  - assets/in its wake poster.jpg
+  - assets/the exorcist poster.jpg
+  - assets/the nun poster.jpg
   
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

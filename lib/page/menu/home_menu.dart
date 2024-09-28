@@ -17,7 +17,7 @@ class HomeMenu extends StatelessWidget {
       body: Stack(
         children: [
           Positioned(
-            top: 40,
+            top: 50,
             left: 50,
             right: 50,
             child: MySearchBar(
@@ -30,7 +30,7 @@ class HomeMenu extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 42,
+            top: 53,
             right: 15,
             child: const Icon(
               Icons.notifications,
@@ -39,7 +39,7 @@ class HomeMenu extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 100,
+            top: 110,
             left: 20,
             right: 20,
             height: 230,
@@ -69,7 +69,7 @@ class HomeMenu extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 340,
+            top: 350,
             left: 0,
             right: 0,
             child: Row(
@@ -92,7 +92,7 @@ class HomeMenu extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 350.0, left: 18.0, right: 18.0),
+            padding: const EdgeInsets.only(top: 380, left: 18, right: 18),
             child: ListView(
               children: [
                 MyText(
@@ -109,7 +109,8 @@ class HomeMenu extends StatelessWidget {
                     'assets/godzila x kong poster.jpg',
                     'assets/jurassic park poster.jpg',
                     'assets/marvel poster.jpg',
-                    'assets/superman poster.jpg'
+                    'assets/superman poster.jpg',
+                    'assets/joker poster.jpg'
                   ],
                   posterWidth: 127,
                   posterHeight: 190,
@@ -154,6 +155,29 @@ class HomeMenu extends StatelessWidget {
                     'assets/mike tyson poster.jpg',
                     'assets/eric cantona poster.jpg',
                     'assets/the god of.jpg'
+                  ],
+                  posterWidth: 127,
+                  posterHeight: 190,
+                ),
+                const SizedBox(height: 20),
+                MyText(
+                  hintText: "Horror",
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                  colors: Colors.white,
+                ),
+                const SizedBox(height: 10),
+                MyMovies(
+                  imagePaths: [
+                    'assets/amelia poster.jpg',
+                    'assets/consumed poster.jpg',
+                    'assets/in its wake poster.jpg',
+                    'assets/mouse trap poster.jpg',
+                    'assets/tarot poster.jpg',
+                    'assets/the hand poster.jpg',
+                    'assets/the y poster.jpg',
+                    'assets/the exorcist poster.jpg',
+                    'assets/the nun poster.jpg'
                   ],
                   posterWidth: 127,
                   posterHeight: 190,
