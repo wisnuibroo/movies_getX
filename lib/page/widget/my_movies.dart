@@ -2,16 +2,15 @@ import 'package:flutter/material.dart';
 
 class MyMovies extends StatelessWidget {
   final List<String> imagePaths;
-  final double posterHeight;
   final double posterWidth;
+  final double posterHeight;
 
   const MyMovies({
-    super.key,
+    Key? key,
     required this.imagePaths,
-    this.posterHeight = 150,
-    this.posterWidth = 100, 
-    required String imagePath,
-  });
+    required this.posterWidth,
+    required this.posterHeight,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +21,7 @@ class MyMovies extends StatelessWidget {
         itemCount: imagePaths.length,
         itemBuilder: (context, index) {
           return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            padding: const EdgeInsets.only(right: 8.0),
             child: Image.asset(
               imagePaths[index],
               width: posterWidth,

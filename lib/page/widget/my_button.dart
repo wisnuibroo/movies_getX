@@ -5,15 +5,16 @@ class MyButton extends StatelessWidget {
   final Color backgroundColor;
   final Color textColor;
   final double radius;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
 
   const MyButton({
     super.key,
     required this.textButton,
     required this.backgroundColor,
     required this.textColor,
+    
     required this.radius,
-    required this.onPressed,
+    this.onPressed,
   });
 
   @override

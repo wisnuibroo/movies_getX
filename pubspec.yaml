@@ -58,6 +58,9 @@ flutter:
   - assets/bglogin.png
   - assets/wplaylogo.png
   - assets/godzilla cover.png
+  - assets/star wars cover.png
+  - assets/eric cantona cover.png
+  - assets/mike tyson cover.png
   - assets/star wars poster.jpg
   - assets/transformers poster.jpg
   - assets/godzila x kong poster.jpg
@@ -72,7 +75,17 @@ flutter:
   - assets/baby boss poster.jpg
   - assets/kungfu panda poster.jpg
   - assets/lego poster.jpg
-  - assets/joker poster.jpg
+  - assets/transformers poster 2.jpg
+  - assets/venom poster.jpg
+  - assets/mufasa poster.jpg
+  - assets/the express poster.jpg
+  - assets/more than poster.jpg
+  - assets/ali poster.jpg
+  - assets/safety poster.jpg
+  - assets/miracle poster.jpg
+  - assets/mike tyson poster.jpg
+  - assets/eric cantona poster.jpg
+  - assets/the god of.jpg
   - assets/captain amerika poster.jpg
   
   # The following line ensures that the Material Icons font is

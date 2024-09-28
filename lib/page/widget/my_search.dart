@@ -7,33 +7,42 @@ class MySearchBar extends StatelessWidget {
   final Color searchBarBackground;
   final String searchBarHint;
   final double searchBarhorizontalPadding;
-  final void Function(String) onChanged;
+
 
   const MySearchBar({
-    super.key,
+    Key? key,
     required this.searchBarHeight,
     required this.shadowColor,
     required this.iconSearchBar,
     required this.searchBarBackground,
     required this.searchBarHint,
     required this.searchBarhorizontalPadding,
-    required this.onChanged,
-  });
+
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: SizedBox(
-        height: searchBarHeight,
-        child: SearchBar(
-          shadowColor: WidgetStateProperty.all(shadowColor),
-          leading: Icon(iconSearchBar),
-          backgroundColor: WidgetStateProperty.all(searchBarBackground),
-          hintText: searchBarHint,
-          padding: WidgetStateProperty.all(
-            EdgeInsets.symmetric(horizontal: searchBarhorizontalPadding),
+    return Container(
+      height: searchBarHeight,
+      decoration: BoxDecoration(
+        color: searchBarBackground,
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+            color: shadowColor,
+            blurRadius: 10,
+            offset: Offset(0, 4),
           ),
-          onChanged: onChanged,
+        ],
+      ),
+      child: TextField(
+
+        decoration: InputDecoration(
+          contentPadding:
+              EdgeInsets.symmetric(horizontal: searchBarhorizontalPadding),
+          hintText: searchBarHint,
+          prefixIcon: Icon(iconSearchBar, color: Colors.black),
+          border: InputBorder.none,
         ),
       ),
     );
