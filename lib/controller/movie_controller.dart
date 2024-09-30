@@ -17,10 +17,10 @@ class MovieController extends GetxController {
     pageController = PageController(initialPage: 0);
 
     filteredItems.value = [
-      ModelMovies('Movie 1', 'assets/godzilla cover.png'),
-      ModelMovies('Movie 2', 'assets/star wars cover.png'),
-      ModelMovies('Movie 3', 'assets/eric cantona cover.png'),
-      ModelMovies('Movie 4', 'assets/mike tyson cover.png'),
+      ModelMovies('assets/godzilla cover.png'),
+      ModelMovies('assets/star wars cover.png'),
+      ModelMovies('assets/eric cantona cover.png'),
+      ModelMovies('assets/mike tyson cover.png'),
     ];
 
     _autoScroll();
