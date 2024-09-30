@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tugas_state_management_getx_movies/component_page/movies_adapter.dart';
 import 'package:tugas_state_management_getx_movies/controller/movie_controller.dart';
-import 'package:tugas_state_management_getx_movies/page/widget/my_movies.dart';
+import 'package:tugas_state_management_getx_movies/model/model_movies.dart';
+
 import 'package:tugas_state_management_getx_movies/page/widget/my_search.dart';
 import 'package:tugas_state_management_getx_movies/page/widget/my_text.dart';
 
@@ -11,6 +13,50 @@ class HomeMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final MovieController movieController = Get.put(MovieController());
+
+    final trendingMovies = [
+      ModelMovies('assets/star wars poster.jpg'),
+      ModelMovies('assets/transformers poster.jpg'),
+      ModelMovies('assets/godzila x kong poster.jpg'),
+      ModelMovies('assets/jurassic park poster.jpg'),
+      ModelMovies('assets/marvel poster.jpg'),
+      ModelMovies('assets/superman poster.jpg'),
+      ModelMovies('assets/joker poster.jpg'),
+    ];
+
+    final animationMovies = [
+      ModelMovies('assets/demon slayer poster.jpg'),
+      ModelMovies('assets/naruto poster.jpg'),
+      ModelMovies('assets/one piece poster.jpg'),
+      ModelMovies('assets/toy story poster.jpg'),
+      ModelMovies('assets/kungfu panda poster.jpg'),
+      ModelMovies('assets/lego poster.jpg'),
+      ModelMovies('assets/doraemon poster.jpg'),
+      ModelMovies('assets/baby boss poster.jpg'),
+    ];
+
+    final sportMovies = [
+      ModelMovies('assets/the express poster.jpg'),
+      ModelMovies('assets/more than poster.jpg'),
+      ModelMovies('assets/ali poster.jpg'),
+      ModelMovies('assets/safety poster.jpg'),
+      ModelMovies('assets/miracle poster.jpg'),
+      ModelMovies('assets/mike tyson poster.jpg'),
+      ModelMovies('assets/eric cantona poster.jpg'),
+      ModelMovies('assets/the god of.jpg'),
+    ];
+
+    final horrorMovies = [
+      ModelMovies('assets/amelia poster.jpg'),
+      ModelMovies('assets/consumed poster.jpg'),
+      ModelMovies('assets/in its wake poster.jpg'),
+      ModelMovies('assets/mouse trap poster.jpg'),
+      ModelMovies('assets/tarot poster.jpg'),
+      ModelMovies('assets/the hand poster.jpg'),
+      ModelMovies('assets/the y poster.jpg'),
+      ModelMovies('assets/the exorcist poster.jpg'),
+      ModelMovies('assets/the nun poster.jpg'),
+    ];
 
     return Scaffold(
       backgroundColor: const Color(0xFF282828),
@@ -42,7 +88,7 @@ class HomeMenu extends StatelessWidget {
             top: 110,
             left: 20,
             right: 20,
-            height: 230,
+            height: 220,
             child: PageView(
               controller: movieController.pageController,
               onPageChanged: (index) {
@@ -92,7 +138,7 @@ class HomeMenu extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 380, left: 18, right: 18),
+            padding: const EdgeInsets.only(top: 370, left: 18, right: 18),
             child: ListView(
               children: [
                 MyText(
@@ -102,16 +148,8 @@ class HomeMenu extends StatelessWidget {
                   colors: Colors.white,
                 ),
                 const SizedBox(height: 10),
-                MyMovies(
-                  imagePaths: [
-                    'assets/star wars poster.jpg',
-                    'assets/transformers poster.jpg',
-                    'assets/godzila x kong poster.jpg',
-                    'assets/jurassic park poster.jpg',
-                    'assets/marvel poster.jpg',
-                    'assets/superman poster.jpg',
-                    'assets/joker poster.jpg'
-                  ],
+                MovieAdapter(
+                  movies: trendingMovies,
                   posterWidth: 127,
                   posterHeight: 190,
                 ),
@@ -123,17 +161,8 @@ class HomeMenu extends StatelessWidget {
                   colors: Colors.white,
                 ),
                 const SizedBox(height: 10),
-                MyMovies(
-                  imagePaths: [
-                    'assets/demon slayer poster.jpg',
-                    'assets/naruto poster.jpg',
-                    'assets/one piece poster.jpg',
-                    'assets/toy story poster.jpg',
-                    'assets/kungfu panda poster.jpg',
-                    'assets/lego poster.jpg',
-                    'assets/doraemon poster.jpg',
-                    'assets/baby boss poster.jpg'
-                  ],
+                MovieAdapter(
+                  movies: animationMovies,
                   posterWidth: 127,
                   posterHeight: 190,
                 ),
@@ -145,17 +174,8 @@ class HomeMenu extends StatelessWidget {
                   colors: Colors.white,
                 ),
                 const SizedBox(height: 10),
-                MyMovies(
-                  imagePaths: [
-                    'assets/the express poster.jpg',
-                    'assets/more than poster.jpg',
-                    'assets/ali poster.jpg',
-                    'assets/safety poster.jpg',
-                    'assets/miracle poster.jpg',
-                    'assets/mike tyson poster.jpg',
-                    'assets/eric cantona poster.jpg',
-                    'assets/the god of.jpg'
-                  ],
+                MovieAdapter(
+                  movies: sportMovies,
                   posterWidth: 127,
                   posterHeight: 190,
                 ),
@@ -167,18 +187,8 @@ class HomeMenu extends StatelessWidget {
                   colors: Colors.white,
                 ),
                 const SizedBox(height: 10),
-                MyMovies(
-                  imagePaths: [
-                    'assets/amelia poster.jpg',
-                    'assets/consumed poster.jpg',
-                    'assets/in its wake poster.jpg',
-                    'assets/mouse trap poster.jpg',
-                    'assets/tarot poster.jpg',
-                    'assets/the hand poster.jpg',
-                    'assets/the y poster.jpg',
-                    'assets/the exorcist poster.jpg',
-                    'assets/the nun poster.jpg'
-                  ],
+                MovieAdapter(
+                  movies: horrorMovies,
                   posterWidth: 127,
                   posterHeight: 190,
                 ),
