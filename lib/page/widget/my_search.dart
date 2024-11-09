@@ -8,7 +8,6 @@ class MySearchBar extends StatelessWidget {
   final String searchBarHint;
   final double searchBarhorizontalPadding;
 
-
   const MySearchBar({
     Key? key,
     required this.searchBarHeight,
@@ -17,7 +16,6 @@ class MySearchBar extends StatelessWidget {
     required this.searchBarBackground,
     required this.searchBarHint,
     required this.searchBarhorizontalPadding,
-
   }) : super(key: key);
 
   @override
@@ -26,24 +24,43 @@ class MySearchBar extends StatelessWidget {
       height: searchBarHeight,
       decoration: BoxDecoration(
         color: searchBarBackground,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(8),
         boxShadow: [
           BoxShadow(
             color: shadowColor,
-            blurRadius: 10,
-            offset: Offset(0, 4),
+            blurRadius: 5,
+            spreadRadius: 1,
           ),
         ],
       ),
-      child: TextField(
-
-        decoration: InputDecoration(
-          contentPadding:
-              EdgeInsets.symmetric(horizontal: searchBarhorizontalPadding),
-          hintText: searchBarHint,
-          prefixIcon: Icon(iconSearchBar, color: Colors.black),
-          border: InputBorder.none,
-        ),
+      child: Row(
+        children: [
+          Padding(
+            padding:
+                EdgeInsets.symmetric(horizontal: searchBarhorizontalPadding),
+            child: Icon(
+              iconSearchBar,
+              color: Colors.white,
+            ),
+          ),
+          Expanded(
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: searchBarHint,
+                hintStyle: TextStyle(color: Colors.white.withOpacity(0.5)),
+                border: InputBorder.none,
+              ),
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+          IconButton(
+            icon: Icon(
+              Icons.mic,
+              color: Colors.white.withOpacity(0.7),
+            ),
+            onPressed: () {},
+          ),
+        ],
       ),
     );
   }
