@@ -1,28 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:tugas_state_management_getx_movies/page/widget/my_button.dart';
 import 'package:tugas_state_management_getx_movies/page/widget/my_movies_card.dart';
+import 'package:tugas_state_management_getx_movies/page/widget/my_text.dart';
 
 class HistoryMenu extends StatelessWidget {
   const HistoryMenu({super.key});
 
   @override
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF282828),
+      backgroundColor: Color(0xFF1A1A1A),
       body: Padding(
         padding: const EdgeInsets.only(top: 50, left: 8, right: 8),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              "History Watch",
-              style: TextStyle(
+            const MyText(
+                hintText: "History Movies",
                 fontSize: 24,
-                color: Colors.white,
                 fontWeight: FontWeight.bold,
-              ),
-            ),
+                colors: Colors.white),
+            SizedBox(height: 10),
             Expanded(
               child: ListView(
                 scrollDirection: Axis.vertical,
@@ -216,6 +213,7 @@ class HistoryMenu extends StatelessWidget {
                       ],
                     ),
                   ),
+                  SizedBox(height: 45)
                 ],
               ),
             ),
